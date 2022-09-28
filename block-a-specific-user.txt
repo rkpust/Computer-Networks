@@ -1,0 +1,26 @@
+Number ACL
+...........
+* Standard = 1-99
+* Extended = 100-199
+
+Go to Router & Write in CLI(Add):
+............................
+
+Router#config t
+Router(config)#access-list 101 deny tcp host 172.5.0.2 host 192.168.0.3 eq 80
+Router(config)#access-list 101 permit tcp any any
+Router(config)#int s2/0
+Router(config-if)#ip access-group 101 out
+Router(config-if)#end
+Router#wr
+
+Go to Router & Write in CLI(Remove):
+............................
+
+Router#config t
+Router(config)#no access-list <Standard Number> deny host <Host IP>
+Router(config)#no access-list <Standard Number> permit any
+
+To show the Access-List
+........................
+Router#show access-list
