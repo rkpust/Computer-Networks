@@ -75,7 +75,7 @@ def create_host(api_token, host_name, interface_ip, group_ids, template_ids):
 
 if __name__ == "__main__":
     # Define your host parameters
-    host_name = "test_host1" # Host name will be visible in Zabbix, must be unique
+    host_name = "Test Host" # Host name will be visible in Zabbix, must be unique
     interface_ip = "10.253.118.92"  # IP of the new host
     group_ids = 5  # Group ID for "Discovered hosts"
     template_ids = 10218  # Template ID for "Cisco IOS by SNMP"
